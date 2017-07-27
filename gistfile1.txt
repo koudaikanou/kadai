@@ -1,0 +1,63 @@
+%テキストを参考にして一度モザイクをかけた後に逆の操作をする
+
+
+clear;
+
+
+ORG=imread('画像');
+imagesc(ORG); axis image;
+pause;
+
+IMG=imresize(ORG,0.5);
+IMG2=imresize(IMG,2,'box');
+imagesc(IMG2); axis image;
+pause;
+
+IMG=imresize(IMG,0.5);
+IMG2=imresize(IMG,4,'box');
+imagesc(IMG2); axis image;
+pause;
+
+
+IMG=imresize(IMG,0.5);
+IMG2=imresize(IMG,8,'box');
+imagesc(IMG2); axis image;
+pause;
+
+
+IMG=imresize(IMG,0.5);
+IMG2=imresize(IMG,16,'box');
+imagesc(IMG2); axis image;
+pause;
+
+
+IMG=imresize(IMG,0.5);
+IMG2=imresize(IMG,32,'box');
+imagesc(IMG2); axis image;
+pause;
+
+
+IMG=imresize(IMG,2);
+IMG2=imresize(IMG,0.03125,'box');
+imagesc(IMG2); axis image;
+pause;
+
+IMG=imresize(IMG,2);
+IMG2=imresize(IMG,0.0625,'box');
+imagesc(IMG2); axis image;
+pause;
+
+IMG=imresize(IMG,2);
+IMG2=imresize(IMG,0.125,'box');
+imagesc(IMG2); axis image;
+pause;
+
+IMG=imresize(IMG,2);
+IMG2=imresize(IMG,0.25,'box');
+imagesc(IMG2); axis image;
+pause;
+
+IMG=imresize(IMG,2);
+IMG2=imresize(IMG,0.5,'box');
+imagesc(IMG2); axis image;
+%参照　長谷川誠氏のサンプルプログラム
